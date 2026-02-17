@@ -31,6 +31,18 @@ try {
 }
 });
 
+app.delete('/api/books/:id', async (req, res) => {
+    try {
+        await pool.query(
+            "DELETE FROM books WHERE id=?", [req.params.id]
+        );
+        res.json({ success: true });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Failed to delete book" });
+    }
+})
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
