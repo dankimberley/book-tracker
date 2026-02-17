@@ -56,7 +56,6 @@ const BookForm = ({ onBookAdded }: BookFormProps) => {
       <button type="button" onClick={handleSubmit}>
         Add Book
       </button>
-      {title}
     </div>
   );
 };

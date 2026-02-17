@@ -1,9 +1,10 @@
 .book {
     width: 100%;
-    border: 1px solid black;
     background-color: lightgray;
     border-radius: 15px;
     padding: 1ch;
+    display: flex;
+    justify-content: space-between;
 }
 
 @keyframes hoverAnimation {
@@ -17,4 +18,10 @@
 
 .book:hover {
     animation: hoverAnimation 0.3s ease-in-out forwards;
+}
+
+.button {
+    background-color: none;
+    color: none;
+    border: none;
 }

@@ -20,10 +20,12 @@ const Book = ({ book, onBookDeleted }: BookProps) => {
 
   return (
     <div className={styles.book}>
-      <strong>{book.title}</strong>
-      <br></br>
-      <em>{book.author}</em>
-      <button onClick={handleDelete}>Delete</button>
+      <div>
+          <strong>{book.title}</strong>
+          <br></br>
+          <em>{book.author}</em>
+      </div>
+      <button onClick={handleDelete} className={styles.button}>❌</button>
     </div>
   );
 };
