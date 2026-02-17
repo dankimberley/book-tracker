@@ -1,5 +1,6 @@
 import type { BookType } from '../types'
 import Book from './Book'
+import styles from './Bookcase.module.css'
 
 type BookcaseProps = {
     books: BookType[]
@@ -7,7 +8,7 @@ type BookcaseProps = {
 
 const Bookcase = ({ books }: BookcaseProps) => {
     return (
-        <div>
+        <div className={styles.bookcase}>
             {books.map((book) => <Book key={book.id} book={book}/>)}
         </div>
     )
